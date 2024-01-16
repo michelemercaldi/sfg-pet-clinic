@@ -1,5 +1,6 @@
 package mm.springframework.petclinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -41,5 +42,11 @@ public class Owner extends Person {
 
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
+    }
+
+    public void addPet(Pet pet) {
+        if (pets == null)
+            pets = new HashSet<>();
+        pets.add(pet);
     }
 }
