@@ -6,7 +6,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity@Table(name = "pets")
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
     @Column(name = "name")
     private String name;
@@ -16,7 +17,7 @@ public class Pet extends BaseEntity {
     private PetType petType;
 
     @ManyToOne
-    @JoinColumn(name= "owner_id")
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     @Column(name = "birth_date")
